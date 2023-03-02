@@ -13,10 +13,10 @@ final class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupPerson(list: persons)
+        getPerson(list: persons)
     }
     
-    private func setupPerson(list persons: [Person]) {
+    private func getPerson(list persons: [Person]) {
         let contactListVC = viewControllers?.first as! PersonListViewController
         let secondPersonListVC = viewControllers?.last as! SecondPersonListViewController
         
