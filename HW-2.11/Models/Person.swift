@@ -26,7 +26,15 @@ extension Person {
         let email = DataStore.shared.emails.shuffled()
         let phone = DataStore.shared.phones.shuffled()
         
-        for person in 0..<DataStore.shared.names.count {
+        // Наименьшее количество элементов
+        let iterationCount = min(
+            name.count,
+            surname.count,
+            email.count,
+            phone.count
+        )
+        
+        for person in 0..<iterationCount {
             let person = Person(
                 name: name[person],
                 surname: surname[person],

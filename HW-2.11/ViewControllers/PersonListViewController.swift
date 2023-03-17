@@ -16,6 +16,10 @@ final class PersonListViewController: UITableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         detailsVC?.person = persons[indexPath.row]
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 // MARK: - UITableViewDataSource

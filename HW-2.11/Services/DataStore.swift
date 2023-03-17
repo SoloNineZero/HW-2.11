@@ -8,8 +8,6 @@
 final class DataStore {
     static let shared = DataStore()
     
-    init() {}
-    
     let names = [
         "Иван",
         "Игорь",
@@ -61,4 +59,6 @@ final class DataStore {
         "support@panama.ru",
         "zoiberg@fork.ru",
     ]
+    
+    private init() {}
 }
